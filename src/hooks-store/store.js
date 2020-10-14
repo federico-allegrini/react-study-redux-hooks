@@ -10,7 +10,7 @@ export const useStore = () => {
   const dispatch = (actionIdentifier, payload) => {
     const newState = actions[actionIdentifier](globalState, payload);
     globalState = { ...globalState, ...newState };
-    for (listener of listeners) {
+    for (const listener of listeners) {
       listener(globalState);
     }
   };
