@@ -1,5 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
+import Counter from "./containers/Counter";
 
 import Navigation from "./components/Nav/Navigation";
 import ProductsPage from "./containers/Products";
@@ -12,6 +13,7 @@ const App = (props) => {
       <main>
         <Route path="/" component={ProductsPage} exact />
         <Route path="/favorites" component={FavoritesPage} />
+        <Counter />
       </main>
     </React.Fragment>
   );
